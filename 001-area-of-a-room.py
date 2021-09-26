@@ -1,4 +1,4 @@
-#area calculation from user inputs 
+#area calculation from user inputs
 
 print ("STARTING PROGRAMME")
 print ("------------------")
