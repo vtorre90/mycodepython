@@ -12,15 +12,19 @@ print ('Type your age')
 input_human_age = int(input())
 dog_age=0
 
-if (input_human_age == 1):
+if input_human_age == 1 :
     print ("The dog age is: " + str (10.50))
-if (input_human_age == 2):
+       
+elif (input_human_age == 2):
     print ("The dog age is: " + str (10.50*2))
-if (input_human_age > 2):
+        
+elif (input_human_age > 2):
     dog_age=(input_human_age-2)*4 + (10.50*2)
-
-#print(int(round(dog_age, 0)))
-print(int(dog_age))
+    print("The dog age is: " + str(dog_age))
+      
+elif (input_human_age <= 0): 
+    print ("You should write a positive number")
+    input_human_age = int(input())
 
 
 
