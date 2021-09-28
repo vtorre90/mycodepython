@@ -8,10 +8,9 @@
 input_user = str(input('Write a letter\n'))
 
 
-if input_user == 'a':
+if input_user == 'a' or input_user == 'e' or input_user == 'i' or input_user == 'o' or input_user == 'u':
     print ('The entered letter is a consonant')
 elif input_user == 'y':
     print ('The entered letter is a vowel and sometimes is a consonant')
 else: 
     print ('The entered letter is a vowel')
-
