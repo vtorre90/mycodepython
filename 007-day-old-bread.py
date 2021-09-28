@@ -12,7 +12,9 @@ input_loaves = int (input())
 
 price_one_loaves = 0.30
 print ('Number of choosen loaves:' + str(input_loaves))
-print ('The price for one loave is: ' + str(price_one_loaves)+'$')
+print ('The regular price for one loave is: ' + str(price_one_loaves)+'$')
+print ('The discount is: ' + str(60)+'%')
+
 
 sum_loaves = price_one_loaves * input_loaves
 
@@ -20,7 +22,8 @@ discount_value = sum_loaves / 100 * 60
 
 sum_loaves_discounted = sum_loaves - discount_value
 
-print ('The total discounted price is: ' + str(round(sum_loaves_discounted, 3)) +'$')
+print ('The discount in $ is: ' + str(discount_value))
+print ('The total discounted price is: ' + str(round(sum_loaves_discounted, 3)) +'$ ' + 'for ' + str(input_loaves) + ' loaves')
 
 
 
