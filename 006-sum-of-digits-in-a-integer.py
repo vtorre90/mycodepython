@@ -12,14 +12,18 @@ print (digits_list)
 
 i=0
 sum=0
-while (i < 4):
-    sum = sum + digits_list[i]
-    i +=1
+list = len(digits_list)
+
+if list == 4:
+
+    while (i < 4):
+        sum = sum + digits_list[i]
+        i +=1
+    print ('The sum is equal to: ' + str(sum))
+
+else: 
+    print ("Write a 4 digits number")
     
-
-#sum = digits_list[0] +  digits_list[1] +  digits_list[2] + digits_list[3]
-
-print ('The sum is equal to: ' + str(sum))
 
 
 
