@@ -7,37 +7,41 @@
 # square is white. Your program may assume that a valid position will always be entered. It does not 
 # need to perform any error checking.
 
-# #1-8 & a-h
-
-
-input_position = input('Type the position\n') 
+#user input
+input_position = input('Inserisci una lettera e un numero\n') 
 inp = input_position
 
-#conversion to separated cha
-# racters
+#conversion to separat the characters
 def spacing (string):
     return ' '.join(string)
 
 inp_space = (spacing(inp))
-
+length = (len(inp_space) -1)
 
 #conversion to a list 
 def convert (string):
     li = list (string.split(" "))
     return li
 
-print ('This is the typed position:\n')
-print (convert(inp_space))
+#checking the colors
+if int(inp_space[-1]) < 9 and length < 3: 
+    if inp_space[0] == 'a' or inp_space[0] == 'c' or inp_space[0] == 'e' or inp_space[0] == 'g':
+        print ('column starts with black\n')
+        if int(inp_space[-1]) %2 == 0:
+            print ('the square is white')
+        elif int(inp_space[-1]) %2 != 0:
+            print ('the square is black')
+    else: 
+        print ('Write a valid position')
 
-str(inp_space[0])
-
-length = (len(inp_space) -1)
-
-if int(inp_space[-1]) < 9 and length < 3:
-    if int(inp_space[-1]) %2 == 0 and (inp_space[0] == 'a' or 'c' or 'e' or 'g'):
-        print ('The space is white')
-    elif int(inp_space[-1]) %2 != 0 and (inp_space[0] == 'b' or 'd' or 'g' or 'h'): 
-        print ('The space is black')
+    if inp_space[0] == 'b' or inp_space[0] == 'd' or inp_space[0] == 'f' or inp_space[0] == 'h':
+        print ('column starts with white\n')
+        if int(inp_space[-1]) %2 != 0:
+            print ('the square is white')
+        elif int(inp_space[-1]) %2 == 0:
+            print ('the square is black')
+    else: 
+        print ('Write a valid position')
 else: 
     print ('Write a valid position')
 
