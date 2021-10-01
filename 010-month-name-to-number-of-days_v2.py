@@ -11,10 +11,10 @@ inp = input("Type the month")
 if inp == 'february':
     print (inp + ' has 28 or 29 days')
 
-elif inp == 'november' or 'april' or 'june' or 'september':
+elif inp == 'november' or inp =='april' or inp =='june' or inp =='september':
     print (inp + ' have 30 days')
 
-elif inp == 'january' or 'march' or 'may' or 'july' or 'august' or 'october':
+elif inp == 'january' or inp =='march' or inp =='may' or inp =='july' or inp =='august' or inp =='october' or inp =='december':
     print (inp + ' have 31 days')
 
 else: 
