@@ -7,45 +7,32 @@
 # square is white. Your program may assume that a valid position will always be entered. It does not 
 # need to perform any error checking.
 
-#user input
-input_position = input('Inserisci una lettera e un numero\n') 
-inp = input_position
+#getting input from user
+user_input = input ('Add one letter and one number\n')
 
-#conversion to separat the characters
-def spacing (string):
-    return ' '.join(string)
+#split the characters
+splitted_input = ' '.join(user_input)
+print(splitted_input + '\n')
 
-inp_space = (spacing(inp))
-length = (len(inp_space) -1)
+char = splitted_input[0]
+number = int (splitted_input[-1])
 
-#conversion to a list 
-def convert (string):
-    li = list (string.split(" "))
-    return li
+#change a character to number
+char = int(ord(char)-96)
 
-#checking the colors
-if int(inp_space[-1]) < 9 and length < 3: 
-    if inp_space[0] == 'a' or inp_space[0] == 'c' or inp_space[0] == 'e' or inp_space[0] == 'g':
-        print ('column starts with black\n')
-        if int(inp_space[-1]) %2 == 0:
-            print ('the square is white')
-        elif int(inp_space[-1]) %2 != 0:
-            print ('the square is black')
-    else: 
-        print ('Write a valid position')
 
-    if inp_space[0] == 'b' or inp_space[0] == 'd' or inp_space[0] == 'f' or inp_space[0] == 'h':
-        print ('column starts with white\n')
-        if int(inp_space[-1]) %2 != 0:
-            print ('the square is white')
-        elif int(inp_space[-1]) %2 == 0:
-            print ('the square is black')
-    else: 
-        print ('Write a valid position')
+# #change a character to numberi
+if number < 9: 
+    if char %2 == 0 and number %2 == 0: 
+        print('Square is black')
+    if char %2 != 0 and number %2 != 0:
+        print('Square is black')
+    elif char %2 != 0 and number %2 == 0:
+        print('Square is white')
+    elif char %2 == 0 and number %2 != 0:
+        print('Square is white')
 else: 
-    print ('Write a valid position')
-
-
+    print ('Write a valid number')
 
 
 
