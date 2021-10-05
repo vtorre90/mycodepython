@@ -17,15 +17,14 @@ zerocost = 0
 fourtheen = 0
 others = 0
 
-input_age = 'a'
+ input_age = input ('Write the age:\n')
 
 while input_age != "": 
-    input_age = input ('Write the age:\n')
-
     if int(input_age) < 3 :
         zerocost += 0
     elif int(input_age) > 2 and int(input_age) < 13 : 
         fourtheen +=14
     else: 
         others += 23
+    input_age = input ('Write the age:\n')
 print (zerocost + fourtheen  + others)
