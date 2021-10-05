@@ -24,12 +24,8 @@ while input_age != "":
 
     if int(input_age) < 3 :
         zerocost += 0
-    
     elif int(input_age) > 2 and int(input_age) < 13 : 
         fourtheen +=14
-    
     else: 
         others += 23
-
-
 print (zerocost + fourtheen  + others)
