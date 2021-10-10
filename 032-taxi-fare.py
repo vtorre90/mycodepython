@@ -12,4 +12,4 @@ def totFare():
     total = str(round(tot_kil, 2))
     return total
 
-print (totFare())
+print ('The total fare is: ' + str(totFare()) + '€')
